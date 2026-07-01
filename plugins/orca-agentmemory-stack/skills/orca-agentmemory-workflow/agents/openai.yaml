@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orca agentmemory workflow"
+  short_description: "Coordinate Orca tasks with durable memory"
+  default_prompt: "Use $orca-agentmemory-workflow to run this task with Orca coordination and conservative memory."

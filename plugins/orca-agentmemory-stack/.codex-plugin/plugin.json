@@ -1,0 +1,21 @@
+{
+  "name": "orca-agentmemory-stack",
+  "version": "0.1.0",
+  "description": "Conservative Orca workflow stack for multi-agent coordination, durable memory, and GitNexus-aware code work.",
+  "author": {
+    "name": "bamburra"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Orca Agentmemory Stack",
+    "shortDescription": "Coordinate Orca tasks with durable memory.",
+    "longDescription": "A conservative workflow stack for Orca-managed multi-agent tasks. Orca owns live coordination, GitNexus handles code intelligence when installed, and agentmemory stores durable decisions and handoffs without automatic context injection.",
+    "developerName": "bamburra",
+    "category": "Productivity",
+    "capabilities": ["Workflow", "Memory", "Coordination"],
+    "defaultPrompt": [
+      "Use the Orca agentmemory workflow for this task.",
+      "Run this as a conservative multi-agent Orca task."
+    ]
+  }
+}

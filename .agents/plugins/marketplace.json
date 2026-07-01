@@ -1,0 +1,20 @@
+{
+  "name": "orca-skill",
+  "interface": {
+    "displayName": "Orca Skill"
+  },
+  "plugins": [
+    {
+      "name": "orca-agentmemory-stack",
+      "source": {
+        "source": "local",
+        "path": "./plugins/orca-agentmemory-stack"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
