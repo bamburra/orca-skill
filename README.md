@@ -9,7 +9,10 @@ agentmemory = durable memory and handoff
 Graphify = out of scope
 ```
 
-The plugin ships one skill: `orca-agentmemory-workflow`.
+The plugin ships one Codex skill: `$orca-agentmemory-workflow`.
+
+Important: `$orca-agentmemory-workflow` is not an AgentMemory routine, slot,
+action, lease, signal, or MCP tool. Do not start it with `memory_routine_run`.
 
 ## Install
 
@@ -62,4 +65,3 @@ AGENTMEMORY_AGENT_SCOPE=shared
 This stack does not install GitNexus. In repositories that already have GitNexus
 instructions, follow them exactly. For example, in `notification-service`, run
 impact analysis before editing symbols and `detect_changes()` before committing.
-

@@ -1,6 +1,6 @@
 ---
 name: orca-agentmemory-workflow
-description: Use when a task mentions Orca, multi-agent work, long-running implementation, context compaction, handoff, durable memory, high token usage, agentmemory, GitNexus-aware repo work, or "modo economico".
+description: Use when a task mentions the Codex skill $orca-agentmemory-workflow, Orca, multi-agent work, long-running implementation, context compaction, handoff, durable memory, high token usage, agentmemory, GitNexus-aware repo work, or "modo economico".
 ---
 
 # Orca agentmemory Workflow
@@ -17,6 +17,8 @@ Graphify = out of scope for this workflow
 ```
 
 Do not create a global `TASK_STATE.md`. Do not make agentmemory the task scheduler. Do not use agentmemory leases/signals unless the user explicitly asks to replace Orca coordination.
+
+`orca-agentmemory-workflow` is this Codex skill name. It is not an AgentMemory routine, slot, action, lease, signal, or MCP tool name. Never call `memory_routine_run`, `memory_slot_list`, `memory_action_create`, `memory_lease`, or `memory_signal_*` to start this workflow. Start by following this skill and the Orca checks below.
 
 ## First Checks
 
@@ -106,6 +108,8 @@ AGENTMEMORY_AGENT_SCOPE=shared
 
 Use `remember`, `recall`, `handoff`, or their MCP equivalents when available. If agentmemory tools are unavailable, do not invent memory state; use Orca summaries and tell the user agentmemory is not wired in this session.
 
+If any agentmemory call returns a server error, stop using agentmemory for the current task unless the user asks to debug agentmemory itself. Continue with Orca state and mention the failure in the handoff.
+
 Save only durable knowledge:
 
 - architectural decisions;
@@ -155,4 +159,3 @@ For multi-agent work, final output should include:
 - GitNexus checks used, if applicable;
 - agentmemory memories saved or recalled, if applicable;
 - verification commands run.
-
